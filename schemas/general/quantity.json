@@ -1,27 +1,27 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "https://json-schema.org/draft/2020-12/schema#",
     "$id": "https://raw.githubusercontent.com/echemdb/metadata-schema/main/schemas/general/quantity.json",
-    "allOf": [{ "$ref": "#/definitions/Quantity" }],
-    "definitions": {
+    "allOf": [{ "$ref": "#/$definitions/Quantity" }, {"$ref": "./value.json"}],
+    "$definitions": {
         "Quantity": {
             "type": "object",
             "title": "Quantity",
             "additionalProperties": true,
             "properties": {
                 "value": {
-                    "$ref": "#/definitions/Value"
+                    "$ref": "#/$definitions/Value"
                 },
                 "uncertainty": {
-                    "$ref": "#/definitions/Uncertainty"
+                    "$ref": "#/$definitions/Uncertainty"
                 },
                 "unit": {
-                    "$ref": "#/definitions/Unit"
+                    "$ref": "#/$definitions/Unit"
                 },
                 "comment": {
-                    "$ref": "#/definitions/Comment"
+                    "$ref": "#/$definitions/Comment"
                 },
                 "custom": {
-                    "$ref": "#/definitions/Custom"
+                    "$ref": "#/$definitions/Custom"
                 }
             },
             "required": ["value", "unit"]

@@ -1,8 +1,8 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "https://json-schema.org/draft/2020-12/schema#",
     "$id": "https://raw.githubusercontent.com/echemdb/metadata-schema/main/schemas/system/electrode.json#",
-    "allOf": [{ "$ref": "#/definitions/Electrode" }],
-    "definitions": {
+    "allOf": [{ "$ref": "#/$definitions/Electrode" }],
+    "$definitions": {
         "Electrode": {
             "type": "object",
             "additionalProperties": false,
@@ -36,17 +36,17 @@
                     "$ref": "../general/quantity.json"
                 },
                 "preparation procedure": {
-                    "$ref": "#/definitions/ElectrodePreparation"
+                    "$ref": "#/$definitions/ElectrodePreparation"
                 },
                 "source": {
                     "type": "object",
-                    "$ref": "#/definitions/ElectrodeSource"
+                    "$ref": "#/$definitions/ElectrodeSource"
                 },
                 "type": {
                     "type": "string"
                 },
                 "shape": {
-                    "$ref": "#/definitions/Shape"
+                    "$ref": "#/$definitions/Shape"
                 },
                 "material": {
                     "type": "string",
@@ -69,7 +69,7 @@
                     "type": "string"
                 },
                 "purity": {
-                    "$ref": "#/definitions/SourcePurity"
+                    "$ref": "#/$definitions/SourcePurity"
                 },
                 "model": {
                     "type":"string"

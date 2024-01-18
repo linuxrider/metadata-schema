@@ -1,12 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "https://json-schema.org/draft/2020-12/schema#",
     "$id": "https://raw.githubusercontent.com/echemdb/metadata-schema/main/schemas/projects.json",
-    "$ref": "#/definitions/Projects",
-    "definitions": {
+    "$ref": "#/$definitions/Projects",
+    "$definitions": {
         "Projects": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/Project"
+                "$ref": "#/$definitions/Project"
             }
         },
         "Project": {

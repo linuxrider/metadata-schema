@@ -1,8 +1,8 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "https://json-schema.org/draft/2020-12/schema#",
     "$id": "https://raw.githubusercontent.com/echemdb/metadata-schema/main/schemas/system/electrolyte.json#",
-    "allOf": [{ "$ref": "#/definitions/Electrolyte" }],
-    "definitions": {
+    "allOf": [{ "$ref": "#/$definitions/Electrolyte" }],
+    "$definitions": {
         "Electrolyte": {
             "type": "object",
             "title": "Electrolyte",
@@ -21,12 +21,12 @@
                     ]
                 },
                 "electrolyte container": {
-                    "$ref": "#/definitions/ElectrolyteContainer"
+                    "$ref": "#/$definitions/ElectrolyteContainer"
                 },
                 "components": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/ElectrolyteComponent"
+                        "$ref": "#/$definitions/ElectrolyteComponent"
                     }
                 },
                 "ph": {
@@ -58,10 +58,10 @@
                     ]
                 },
                 "source": {
-                    "$ref": "#/definitions/ComponentSource"
+                    "$ref": "#/$definitions/ComponentSource"
                 },
                 "purity": {
-                    "$ref": "#/definitions/ComponentPurity"
+                    "$ref": "#/$definitions/ComponentPurity"
                 },
                 "partial pressure": {
                     "$ref": "../general/quantity.json"
@@ -126,7 +126,7 @@
                     "type": "string"
                 },
                 "supplied purity": {
-                    "$ref": "#/definitions/SuppliedPurity"
+                    "$ref": "#/$definitions/SuppliedPurity"
                 },
                 "refinement": {
                     "type": "string"
@@ -170,7 +170,7 @@
                 "components": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/ElectrolyteContainerComponent"
+                        "$ref": "#/$definitions/ElectrolyteContainerComponent"
                     }
                 }
             },

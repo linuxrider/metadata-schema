@@ -1,13 +1,13 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "https://json-schema.org/draft/2020-12/schema#",
     "$id": "https://raw.githubusercontent.com/echemdb/metadata-schema/main/schemas/general/temperature.json",
-    "allOf": [{ "$ref": "#/definitions/Temperature" }],
-    "definitions": {
+    "allOf": [{ "$ref": "#/$definitions/Temperature" }],
+    "$definitions": {
         "Temperature": {
             "type": "object",
             "title": "Temperature",
             "oneOf": [ 
-                { "$ref": "#/definitions/InexactlySpecifiedTemperature" },
+                { "$ref": "#/$definitions/InexactlySpecifiedTemperature" },
                 { "$ref": "./quantity.json" }
             ]
         },
@@ -17,14 +17,14 @@
             "additionalProperties": false,
             "properties": {
             "descriptor": {
-                    "$ref": "#/definitions/Descriptor"
+                    "$ref": "#/$definitions/Descriptor"
                 },
                 "comment": {
-                    "$ref": "#/definitions/Comment"
+                    "$ref": "#/$definitions/Comment"
                 },
                 "custom":
                 {
-                    "$ref": "#/definitions/Custom"
+                    "$ref": "#/$definitions/Custom"
                 }
             }
         },

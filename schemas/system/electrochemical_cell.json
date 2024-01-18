@@ -1,8 +1,8 @@
 {
-    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$schema": "https://json-schema.org/draft/2020-12/schema#",
     "$id": "https://raw.githubusercontent.com/echemdb/metadata-schema/main/schemas/system/electrochemical_cell.json#",
-    "allOf": [{ "$ref": "#/definitions/ElectrochemicalCell" }],
-    "definitions": {
+    "allOf": [{ "$ref": "#/$definitions/ElectrochemicalCell" }],
+    "$definitions": {
         "ElectrochemicalCell": {
             "type": "object",
             "additionalProperties": false,
@@ -14,7 +14,7 @@
                 "components": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/ElectrochemicalCellComponent"
+                        "$ref": "#/$definitions/ElectrochemicalCellComponent"
                     }
                 },
                 "cell description": {
@@ -24,7 +24,7 @@
                     "type": "string"
                 },
                 "source": {
-                    "$ref": "#/definitions/ElectrochemicalCellSource"
+                    "$ref": "#/$definitions/ElectrochemicalCellSource"
                 }
             }
         },
