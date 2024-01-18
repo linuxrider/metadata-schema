@@ -6,7 +6,7 @@
         "Quantity": {
             "type": "object",
             "title": "Quantity",
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
                 "value": {
                     "$ref": "#/definitions/Value"
