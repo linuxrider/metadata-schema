@@ -1,0 +1,13 @@
+{   "$schema": "http://json-schema.org/draft-06/schema#",         
+    "allOf": [{
+                "allOf": [{ "$ref": "https://specs.frictionlessdata.io/schemas/data-package.json" }],
+                "properties": {
+                    "resources": { "type":"array", "minItems": 1,
+                        "items": { 
+                            "allOf": [{ "$ref": "https://specs.frictionlessdata.io/schemas/data-resource.json" }],
+                            "properties": {"electrochemistry": {"allOf": [{"$ref":"autotag.json"}]}}
+                        }
+                    }
+                }
+	}]
+}
