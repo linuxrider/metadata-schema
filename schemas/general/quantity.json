@@ -13,36 +13,51 @@
                 },
                 "unit": {
                     "$ref": "#/definitions/Unit"
+                },
+                "comment": {
+                    "$ref": "#/definitions/Comment"
+                },
+                "custom": {
+                    "$ref": "#/definitions/Custom"
                 }
-            }
+            },
+            "required": ["value", "unit"]
         },
-    "Unit": {
-        "anyOf": [
-            {
-                "type": "integer"
-            },
-            {
-                "type": "null"
-            },
-            {
-                "type": "string"
-            }
-        ],
-        "title": "Unit"
+        "Unit": {
+            "anyOf": [
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Unit"
         },
-    "Value": {
-        "anyOf": [
-            {
-                "type": "number"
-            },
-            {
-                "type": "null"
-            },
-            {
-                "type": "string"
-            }
-        ],
-        "title": "Value"
+        "Value": {
+            "anyOf": [
+                {
+                    "type": "number"
+                },
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "title": "Value"
+        },
+        "Custom": {
+            "type": "object",
+            "title": "Custom"
+        },
+        "Comment": {
+            "type": "string",
+            "title": "Comment"
         }
     }
 }
