@@ -19,9 +19,6 @@
                 "experimental": {
                     "$ref": "experimental.json"
                 },
-                "figure description": {
-                    "$ref": "figure_description.json"
-                },
                 "project": {
                     "$ref": "projects.json"
                 },
@@ -33,7 +30,6 @@
                 "curation",
                 "eln",
                 "experimental",
-                "figure description",
                 "system"
             ],
             "title": "Autotag"
