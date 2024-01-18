@@ -30,13 +30,10 @@
                     }
                 },
                 "ph": {
-                    "$ref": "#/definitions/Ph"
+                    "$ref": "../general/ph.json"
                 },
                 "temperature": {
-                    "$ref": "../general/quantity.json"
-                },
-                "comment": {
-                    "type": "string"
+                    "$ref": "../general/temperature.json"
                 }
             }
         },
@@ -178,25 +175,6 @@
                 }
             },
             "title": "ElectrolyteContainer"
-        },
-        "Ph": {
-            "type": "object",
-            "additionalProperties": false,
-            "properties": {
-                "value": {
-                    "type": "number"
-                },
-                "uncertainty": {
-                    "type": "number"
-                },
-                "comment": {
-                    "type": "string"
-                },
-                "calculation": {
-                    "type": "string"
-                }
-            },
-            "title": "Ph"
         },
         "ElectrolyteContainerComponent": {
             "type": "object",

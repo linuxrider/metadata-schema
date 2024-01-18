@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://raw.githubusercontent.com/echemdb/metadata-schema/main/schemas/general/quantity.json",
+    "allOf": [{ "$ref": "#/definitions/Ph" }],
+    "definitions": {
+        "Ph": {
+            "type": "object",
+            "title": "Ph",
+            "allOf": [{ "$ref": "./quantity.json" }],
+            "properties": {
+                "temperature": { "$ref": "./temperature.json" }
+            }
+        }
+    }
+}

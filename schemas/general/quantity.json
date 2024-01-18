@@ -11,6 +11,9 @@
                 "value": {
                     "$ref": "#/definitions/Value"
                 },
+                "uncertainty": {
+                    "$ref": "#/definitions/Uncertainty"
+                },
                 "unit": {
                     "$ref": "#/definitions/Unit"
                 },
@@ -51,6 +54,14 @@
             ],
             "title": "Value"
         },
+        "Uncertainty": {
+            "anyOf": [
+                {
+                    "type": "number"
+                }
+            ],
+            "title": "Uncertainty"
+        },      
         "Custom": {
             "type": "object",
             "title": "Custom"
