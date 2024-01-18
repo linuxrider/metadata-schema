@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://raw.githubusercontent.com/echemdb/metadata-schema/main/schemas/general/temperature.json",
+    "allOf": [{ "$ref": "#/definitions/Temperature" }],
+    "definitions": {
+        "Temperature": {
+            "type": "object",
+            "title": "Temperature",
+            "oneOf": [ 
+                { "$ref": "#/definitions/InexactlySpecifiedTemperature" },
+                { "$ref": "./quantity.json" }
+            ]
+        },
+        "InexactlySpecifiedTemperature": {
+            "type": "object",
+            "title": "InexactlySpecifiedTemperature",
+            "additionalProperties": false,
+            "properties": {
+            "descriptor": {
+                    "$ref": "#/definitions/Descriptor"
+                },
+                "comment": {
+                    "$ref": "#/definitions/Comment"
+                },
+                "custom":
+                {
+                    "$ref": "#/definitions/Custom"
+                }
+            }
+        },
+        "Descriptor": {
+            "type": "string",
+            "enum": ["room temperature", "unknown"],
+            "title": "Descriptor"
+        },
+        "Comment": {
+            "type": "string",
+            "title": "Comment"
+        },
+        "Custom": {
+            "type": "object",
+            "title": "Custom"
+        }
+    }
+}
